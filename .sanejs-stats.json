@@ -1,0 +1,42 @@
+{
+    "fileManager": {
+        "directories": [
+            "build",
+            "src"
+        ],
+        "files": {
+            ".babelrc": "6e7bd38b879dd139c7245107d83479561e2f809ca3db0ba8e3754fc89ae5ce2c",
+            ".babelrc.js": "c7ebf4e5e80b24b6ea4cf05fd6ba2ad0f1ead22ab27d63be4d4e8f0f045b78ae",
+            ".editorconfig": "d502a1ed86562554b27a93440ccb9f4188f914101588565aacb5f025b1036ab3",
+            ".eslintignore": "105fa8f7c7efd8cbc5a5798fc9465909bf142a778bc967f78a2d5cc7667c6c1d",
+            ".eslintrc.js": "9544ded37907929edae8fa94b47f6a331d83144c60eb598387b19459cff3cd88",
+            ".flowconfig": "9b987edcd27657c23fb023fcb493ee31798ccf7b96c6e60508c25216a2d284bf",
+            ".gitignore": "5d27dc94b1232606d9b472d265f198cc84da0614c8609c53b36025bd36fe624c",
+            ".npmignore": "7197a2466f26a2bfc3d4a0b0e87d2dd95607488c4876b7b748c36c0702f18df5",
+            ".prettierignore": "105fa8f7c7efd8cbc5a5798fc9465909bf142a778bc967f78a2d5cc7667c6c1d",
+            ".prettierrc.js": "c2b6686bd572e1b3c0a12fbf00d0ab3abb5a7625d0a901f227b70bf16b2f01fb",
+            "jest.config.js": "ed643c7150e314c0edcf3ee87ac40c3d0bda9921f1fa2c780ac7efc598840e53",
+            "wallaby.config.js": "11125f72c06934a7b0c08ed75ac46872c40a5b256579b10507156df79d017a77"
+        }
+    },
+    "packageJson": {
+        "lint-staged": {
+            "*.{js,md,json}": [
+                "prettier --write",
+                "git add"
+            ]
+        },
+        "scripts": {
+            "build": "sanejs build --production",
+            "clean": "sanejs clean",
+            "dev": "sanejs dev --development",
+            "flow": "sanejs flow",
+            "format": "sanejs format",
+            "lint": "sanejs lint",
+            "lint.fix": "sanejs lint.fix",
+            "precommit": "lint-staged",
+            "test": "sanejs test",
+            "test.watch": "sanejs test.watch"
+        }
+    }
+}

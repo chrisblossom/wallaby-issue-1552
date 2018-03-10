@@ -1,0 +1,36 @@
+{
+  "name": "wallaby-issue-1552",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sanejs build --production",
+    "clean": "sanejs clean",
+    "dev": "sanejs dev --development",
+    "flow": "sanejs flow",
+    "format": "sanejs format",
+    "lint": "sanejs lint",
+    "lint.fix": "sanejs lint.fix",
+    "precommit": "lint-staged",
+    "test": "sanejs test",
+    "test.watch": "sanejs test.watch"
+  },
+  "lint-staged": {
+    "*.{js,md,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "sanejs": {
+    "presets": [
+      "@sanejs/node-module"
+    ]
+  },
+  "devDependencies": {
+    "@sanejs/core": "0.0.2",
+    "@sanejs/preset-node-module": "0.0.3"
+  }
+}

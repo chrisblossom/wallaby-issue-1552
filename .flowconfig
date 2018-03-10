@@ -1,0 +1,24 @@
+; This file is managed by sanejs
+;
+; DO NOT MODIFY
+[ignore]
+.*/node_modules/kefir/*
+<PROJECT_ROOT>/build/.*
+
+[include]
+
+[libs]
+<PROJECT_ROOT>/flow/declarations/
+
+[options]
+suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe
+suppress_comment=\\(.\\|\n\\)*\\$FlowIssue
+suppress_comment=\\(.\\|\n\\)*\\$FlowIgnore
+module.ignore_non_literal_requires=true
+module.use_strict=true
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
+include_warnings=true
+
+[lints]
+;all=error
