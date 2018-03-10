@@ -56,16 +56,17 @@ const wallaby = (wallabyConfig) => {
             testFramework: 'jest',
 
             setup: (setupConfig) => {
+                require('babel-polyfill');
+                process.env.NODE_ENV = 'test';
+
+                process.chdir(setupConfig.localProjectDir);
+                const jestConfig = require('./jest.config');
                 /**
                  * https://github.com/wallabyjs/public/issues/1268#issuecomment-323237993
                  */
                 if (setupConfig.projectCacheDir !== process.cwd()) {
                     process.chdir(setupConfig.projectCacheDir);
                 }
-
-                require('babel-polyfill');
-                process.env.NODE_ENV = 'test';
-                const jestConfig = require('./jest.config');
                 jestConfig.transform = {
                     '__sandbox__.+\\.jsx?$': 'babel-jest',
                 };
