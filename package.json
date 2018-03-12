@@ -25,12 +25,14 @@
     ]
   },
   "sanejs": {
-    "presets": [
-      "@sanejs/node-module"
-    ]
+    "presets": ["@sanejs/node-module"],
+
+    "files": {
+      "allowChanges": ["wallaby.config.js"]
+    }
   },
   "devDependencies": {
-    "@sanejs/core": "0.0.2",
-    "@sanejs/preset-node-module": "0.0.3"
+    "@sanejs/core": "0.0.3",
+    "@sanejs/preset-node-module": "0.0.4"
   }
 }

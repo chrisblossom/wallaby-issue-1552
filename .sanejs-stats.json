@@ -16,7 +16,7 @@
             ".prettierignore": "105fa8f7c7efd8cbc5a5798fc9465909bf142a778bc967f78a2d5cc7667c6c1d",
             ".prettierrc.js": "c2b6686bd572e1b3c0a12fbf00d0ab3abb5a7625d0a901f227b70bf16b2f01fb",
             "jest.config.js": "ed643c7150e314c0edcf3ee87ac40c3d0bda9921f1fa2c780ac7efc598840e53",
-            "wallaby.config.js": "11125f72c06934a7b0c08ed75ac46872c40a5b256579b10507156df79d017a77"
+            "wallaby.config.js": "f3f77edf6ddde376541cea2fa434d560b32027a2ab8879f6df57f59751e63328"
         }
     },
     "packageJson": {

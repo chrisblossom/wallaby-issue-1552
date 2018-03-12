@@ -57,11 +57,10 @@ const wallaby = (wallabyConfig) => {
 
             setup: (setupConfig) => {
                 /**
-                 * https://github.com/wallabyjs/public/issues/1268#issuecomment-323237993
+                 * Set to project local path so sanejs can correctly resolve modules
+                 * https://github.com/wallabyjs/public/issues/1552#issuecomment-372002860
                  */
-                if (setupConfig.projectCacheDir !== process.cwd()) {
-                    process.chdir(setupConfig.projectCacheDir);
-                }
+                process.chdir(setupConfig.localProjectDir);
 
                 require('babel-polyfill');
                 process.env.NODE_ENV = 'test';
@@ -70,6 +69,13 @@ const wallaby = (wallabyConfig) => {
                     '__sandbox__.+\\.jsx?$': 'babel-jest',
                 };
                 setupConfig.testFramework.configure(jestConfig);
+
+                /**
+                 * https://github.com/wallabyjs/public/issues/1268#issuecomment-323237993
+                 *
+                 * reset to expected wallaby process.cwd
+                 */
+                process.chdir(setupConfig.projectCacheDir);
             },
         },
     });
